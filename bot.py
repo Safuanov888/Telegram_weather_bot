@@ -1,16 +1,16 @@
 import sys
 import time
-
+from dataclasses import dataclass
+from enum import IntEnum
+from typing import TypeAlias
+from urllib.request import urlopen
 import json
+
 from loguru import logger
 from aiogram import Bot, Dispatcher, executor, types  # type: ignore
 from aiogram.dispatcher.filters.state import StatesGroup, State  # type: ignore
 from aiogram.dispatcher import FSMContext  # type: ignore
 from aiogram.contrib.fsm_storage.memory import MemoryStorage  # type: ignore
-from dataclasses import dataclass
-from urllib.request import urlopen
-from typing import TypeAlias
-from enum import IntEnum
 from translatepy.translators.google import GoogleTranslate  # type: ignore
 
 import key
